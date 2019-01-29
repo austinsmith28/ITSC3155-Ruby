@@ -8,7 +8,14 @@ end
 
 # Part II
 def max_2_sum arr
-  # YOUR CODE HERE
+  
+  
+  if arr.length == 0
+      return 0  
+  end
+  
+  arr.max(2).reduce(:+)
+
 end
 
 # Part III
