@@ -20,6 +20,25 @@ end
 
 # Part III
 def sum_to_n? arr, n
- 
+  i,j = 0
   
+ if arr.length == 1 || arr.length == 0
+   return false
+ end
+ 
+ 
+ while(i<arr.length-1)
+ j = i+1
+ while(j<arr.length)
+ 
+  if arr[j] + arr[i] == n
+    return true
+  end
+  
+ j = j+1
+ 
+ end
+ i = i+1
+ end
+  return false 
 end
