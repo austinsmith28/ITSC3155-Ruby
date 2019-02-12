@@ -3,9 +3,17 @@ module FunWithStrings
    words = self.downcase.scan(/\w/)
     words == words.reverse
   end
+  
   def count_words
-    # your code here
+    wordsCount = Hash.new(0)
+
+  str = self.scan(/\b\S+\b/)
+
+  str.each { |word| wordsCount[word.downcase] += 1}
+  
+return wordsCount
   end
+  
   def anagram_groups
     # your code here
   end
