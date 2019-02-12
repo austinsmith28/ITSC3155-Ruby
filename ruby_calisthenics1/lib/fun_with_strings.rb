@@ -15,7 +15,9 @@ return wordsCount
   end
   
   def anagram_groups
-    # your code here
+    self.split.group_by do |word|
+      word.downcase.chars.sort
+    end.values
   end
 end
 
