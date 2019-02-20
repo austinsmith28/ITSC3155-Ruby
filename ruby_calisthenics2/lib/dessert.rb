@@ -17,16 +17,16 @@ class Dessert
     return @calories
   end
   def healthy?
-    # your code here
+    return @calories < 200
   end
   def delicious?
-    # your code here
+    return self.instance_of? Dessert
   end
 end
 
 class JellyBean < Dessert
   # add code for setters and getters
   def initialize(flavor)
-    # your code here
+    @flavor = flavor
   end
 end
