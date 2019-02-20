@@ -23,7 +23,12 @@ class Dessert
     return @calories < 200
   end
   def delicious?
-    return self.instance_of? Dessert
+   return (!(self.name.include? "licorice"))
+      #puts self.name
+      #return false
+   #end
+    
+    #return self.is_a? Dessert
   end
 end
 
