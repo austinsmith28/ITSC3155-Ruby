@@ -11,6 +11,9 @@ class Dessert
     @calories = new_calories
   end
   def name
+    if (self.instance_of? JellyBean)
+      return @flavor + " jelly bean"
+    end
     return @name
   end
   def calories
@@ -28,5 +31,12 @@ class JellyBean < Dessert
   # add code for setters and getters
   def initialize(flavor)
     @flavor = flavor
+    @calories = 5
+  end
+  def flavor
+    return @flavor
+  end
+  def flavor=(new_flavor)
+    @flavor = new_flavor
   end
 end
