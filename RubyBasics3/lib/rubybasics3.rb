@@ -8,4 +8,8 @@ class BookInStock
         @isbn = isbn
         @price = price.to_f
     end
+    
+    def price_as_string
+        "$%.2f" % @price
+    end 
 end
